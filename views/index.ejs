@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<body background="http://thumbs.dreamstime.com/z/background-cakes-vector-pattern-sweet-brownies-44095354.jpg"></body>
+
+<div style="float:right;">
+  <% if(typeof first_name !== "undefined") { %>
+  Welcome, <%= first_name %>
+  <% } else { %>
+  <a href="/login">Login</a>
+  <% } %>
+</div>
+
+<html>
+<head>
+
+  <title>Title</title>
+
+  <style>
+
+    #header{
+      background-color:saddlebrown ;
+      color:sandybrown;
+      height: 90px;
+      text-align:center;
+      padding:1px;
+      font-size: 20px;
+    }
+
+    #nav {
+      line-height:30px;
+      background-color: antiquewhite;
+      height:580px;
+      width:250px;
+      float:left;
+      padding:5px;
+      opacity: 0.90;
+      filter: alpha(opacity=50);
+    }
+
+    #section {
+      line-height:20px;
+      background-color: antiquewhite;
+      width:500px;
+      float: right;
+      padding:100px;
+      opacity: 0.90;
+      filter: alpha(opacity=50);
+    }
+
+    #footer {
+      background-color:brown;
+      color:rosybrown;
+      clear:both;
+      text-align:center;
+      padding:5px;
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+<div id="header">
+  <h1> The Best Brownie Stores Around! </h1>
+</div>
+
+
+<div id="nav">
+
+
+  <br />
+  <a href=" /store/all"> Brownie Store Locations!</a>
+  <br />
+  <a href="/brownie/all"> Fan Favorites</a>
+  <br />
+  <a href="/rating/all"> User Ratings on Stores!</a>
+  <br />
+  <a href="/amenity/all">Amenities</a>
+  <br />
+  <a href="/extra/all"> Popular Store Extras!</a>
+  <br />
+  <a href="/rating/allrates"> Brownie Store Rating!</a>
+  <br />
+  <a href="/account/all"> Users!</a>
+  <br />
+  <a href="/account/create">Create An Account!</a>
+  <br />
+
+  <% if(typeof first_name !== "undefined") { %><a href="/logout">Logout</a><% } %>
+
+</div>
+
+
+<div id="section">
+  <p> Brownies Galore ! </p>
+  <p> Welcome to this Brownies Galore! Specifically made for brownie connoisseur's
+      all over the Golden State, we have provided you with some of the best
+      brownie stores around. Our purpose is to make sure viewers are well
+      aware of these awesome brownies, and to provide you with all the
+      information you need. It's no question that picking out the right brownie store
+      can be difficult, so it's our job to make this experience smooth for you.
+      Through us, you will be able to navigate to the place of your liking!
+      Take a look around, time to satisfy that sweet tooth!</p>
+
+  <p> Feel free to make an account (if you haven't already) to navigate through the whole website!
+      After Creating your account, Login is at the upper right corner. </p>
+
+
+  <p> Contact us through email or phone</p>
+    <p> email: browniesgalore@yahoo.com</p>
+  <p> phone: (333)(333-3333) </p>
+
+  <p> Headquarters are located at: 3333 Thirty-Third Avenue San Francisco, California, 94122</p>
+  </div>
+</body>
+
+</html>

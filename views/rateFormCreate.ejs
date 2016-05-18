@@ -1,0 +1,18 @@
+<% js_includes = []%>
+
+
+<h1>Add a New Rating</h1>
+<form method="POST" action="/rating/insert_rate">
+    Title <input type="text" id="movie_title" name="movie_title" /> <br />
+    Tag Line<textarea name="tagline"></textarea> <br />
+    <br />
+    Genre(s)<br />
+    <% for( var i = 0; i < genres.length; i++) { %>
+    <input type="checkbox" name="genre_id" id="genre_id" value="<%= genres[i].genre_id %>"><%= genres[i].genre_name %> <br />
+    <% } %>
+
+    <br />
+
+    <button id="addBtn">Add</button>
+</form>
+

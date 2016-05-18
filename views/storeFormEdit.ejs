@@ -1,0 +1,38 @@
+<% if (typeof message !== 'undefined') { %>
+<div><%= message %></div>
+<% } %>
+
+<% if(rs.length > 0) { %>
+<h1>Edit Store</h1>
+<form method="POST" action="/store/update_store">
+    <input type="hidden" name="store_ID" value="<%= rs[0].store_ID %>" />
+    Name <input type="text" id="store_name" name="store_name" value="<%= rs[0].store_name%>" />
+    <br />
+    State <input type="text" id="state" name="state" value="<%= rs[0].state%>" />
+    <br />
+    Zipcode <input type="text" id="zipcode" name="zipcode" value="<%= rs[0].zipcode%>" />
+
+    location(s)
+    <div style="margin-left:10px;">
+        <% for( var i = 0; i < location.length; i++) { %>
+        <input type="checkbox"
+               name="location_ID"
+               id="location_ID"
+
+                <%for (var j=0; j < rs.length; j++) {
+                if(location[i].location_ID == rs[j].location_ID) { %>
+               checked
+
+                <% }
+                }
+                %>
+               value="<%= location[i].location_ID %>"><%= location[i].loc_name %> <br />
+        <% } %>
+    </div>
+
+
+    <button id="addBtn">Edit</button>
+</form>
+<% } else { %>
+No store  matches that ID.
+<% } %>

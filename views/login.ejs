@@ -1,0 +1,9 @@
+<h1>Login</h1>
+<% if(typeof msg !== "undefined") { %>
+<%= msg %>
+<% } %>
+<form action="/authenticate">
+    <label for="email">Email:</label><input type="text" id="email" name="email" /><br />
+    <label for="pass_word">Password:</label><input type="pass_word" id="pass_word" name="pass_word" /><br />
+    <button>Go!</button>
+</form>

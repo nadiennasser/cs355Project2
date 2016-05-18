@@ -1,0 +1,12 @@
+<% if(rs.length > 0) { %>
+User Account: <%= rs[0].first_name %>
+<ul>
+    <% for(var i=0; i < rs.length; i++) {%>
+    <li>Email: <%= rs[i].email %></li>
+    <li>Password: <%= rs[i].pass_word %></li>
+
+    <% } %>
+</ul>
+<% } else { %>
+No store matched user id <%= user_ID %>.
+<% } %>

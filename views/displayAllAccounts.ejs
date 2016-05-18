@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body background="http://thumbs.dreamstime.com/z/background-cakes-vector-pattern-sweet-brownies-44095354.jpg"></body>
+<title>ACCOUNTS AYEEEEE</title>
+
+<style>
+
+    #header{
+        background-color:saddlebrown ;
+        color:sandybrown;
+        height: 90px;
+        text-align:center;
+        padding:1px;
+        font-size: 20px;
+    }
+
+    #nav {
+        line-height:17px;
+        background-color: antiquewhite;
+        height:580px;
+        width:250px;
+        float:left;
+        padding:5px;
+        opacity: 0.90;
+        filter: alpha(opacity=50);
+    }
+
+
+    #section {
+        line-height:20px;
+        background-color: antiquewhite;
+        height:390px;
+        width:500px;
+        float: right;
+        padding:100px;
+        opacity: 0.90;
+        filter: alpha(opacity=50);
+
+    }
+
+    #footer {
+        background-color:brown;
+        color:rosybrown;
+        clear:both;
+        text-align:center;
+        padding:5px;
+    }
+
+</style>
+</head>
+
+
+<body>
+
+<div id="header">
+    <h1> User Accounts! </h1>
+</div>
+
+
+
+<div id="section">
+    <p> Users ! </p>
+    <p> Here are the user accounts connected to our website. </p>
+
+</div>
+</body>
+
+</html>
+
+<div id = "nav">
+    <% if(rs.length > 0) { %>
+    <table border="1">
+        <tr><th>Account Name</th></tr>
+        <% for (var i=0; rs.length > i; i++) { %>
+        <tr>
+            <td><a href="/account/?user_ID=<%= rs[i].user_ID %>"> <%= rs[i].first_name %></a></td>
+        </tr>
+        <% } %>
+    </table>
+    <% } else { %>
+    No Account exist.
+    <% } %>
+
+    <div style="margin-top:10px;">
+        <a href="/account/create">Create An Account!</a>
+    </div>
+
+
+</div>
+

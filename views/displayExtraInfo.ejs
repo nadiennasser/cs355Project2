@@ -1,0 +1,12 @@
+<% if(rs.length > 0) { %>
+Popular Sides: <%= rs[0].store_name %>
+<ul>
+    <% for(var i=0; i < rs.length; i++) {%>
+    <li><%= rs[i].extra_name %></li>
+
+
+    <% } %>
+</ul>
+<% } else { %>
+No store matched store id <%= store_ID %>.
+<% } %>

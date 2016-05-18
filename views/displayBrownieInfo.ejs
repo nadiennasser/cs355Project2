@@ -1,0 +1,16 @@
+<% if(rs.length > 0) { %>
+Fan-Favorite Brownies: <%= rs[0].b_name %>
+<ul>
+    <% for(var i=0; i < rs.length; i++) {%>
+
+    <li>Store: <%= rs[i].store_name %></li>
+    <ul style="list-style-type:circle">
+        <li>Size: <%= rs[i].size %></li>
+        <li>Type: <%= rs[i].b_type %></li>
+    </ul>
+
+    <% } %>
+</ul>
+<% } else { %>
+No store matched brownie id <%= brownie_ID %>.
+<% } %>

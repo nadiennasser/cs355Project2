@@ -1,0 +1,18 @@
+<% js_includes = []%>
+
+<h1>Add a New Store</h1>
+<form method="POST" action="/store/insert_store">
+    Title <input type="text" id="store_name" name="store_name" /> <br />
+    State <input type="text" id="state" name="state" /> <br />
+    Zipcode <input type="text" id="zipcode" name="zipcode" /> <br />
+    <br />
+    location(s)<br />
+    <% for( var i = 0; i < location.length; i++) { %>
+    <input type="checkbox" name="location_ID" id="location_ID" value="<%= location[i].location_ID %>"><%= location[i].loc_name %> <br />
+    <% } %>
+
+    <br />
+
+    <button id="addBtn">Add</button>
+</form>
+

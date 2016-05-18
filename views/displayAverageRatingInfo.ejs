@@ -1,0 +1,16 @@
+<% if(rs.length > 0) { %>
+Store Ratings:
+<!--<%= rs[0].store_name %>-->
+<ul>
+    <% for(var i=0; i < rs.length; i++) {%>
+
+    <li>Average Rating: <%= rs[i].store_name %></li>
+    <ul style="list-style-type:circle">
+        <li>Rate: <%= rs[i].rate %></li>
+    </ul>
+
+    <% } %>
+</ul>
+<% } else { %>
+No store matched store id <%= store_ID %>.
+<% } %>
